@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>MobileAutomation</groupId>
+  <artifactId>TheFloow</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>The Floow </name>
+  <description>The Floow Mobile Application Automation using selenium java and Appium</description>  
+  
+  <build>
+		<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>2.3.2</version>
+			<configuration>
+				<source>1.7</source>
+				<target>1.7</target>
+			</configuration>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>2.12</version>
+			<inherited>true</inherited>
+			<configuration>
+				<suiteXmlFiles>
+					<suiteXmlFile>master.xml</suiteXmlFile>
+				</suiteXmlFiles>
+			</configuration>
+		</plugin>
+	</plugins> 
+  </build>
+  <dependencies>			
+       	<dependency>				
+            <groupId>org.seleniumhq.selenium</groupId>								
+            <artifactId>selenium-java</artifactId>								
+            <version>3.7.1</version>								
+		</dependency>				
+        <dependency>				
+            <groupId>org.testng</groupId>								
+            <artifactId>testng</artifactId>								
+            <version>6.10</version>								
+            <scope>test</scope>							  			
+       </dependency>
+		<dependency>				
+            <groupId>org.apache.poi</groupId>								
+            <artifactId>poi</artifactId>								
+            <version>3.9</version>								
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>3.9</version>
+		</dependency>				
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml-schemas</artifactId>
+		    <version>3.7</version>
+		</dependency>	
+<dependency>
+		    <groupId>com.relevantcodes</groupId>
+		    <artifactId>extentreports</artifactId>
+		    <version>2.41.1</version>
+		</dependency>	
+		<dependency>
+            <groupId>atu.testng.reports.ATUReports</groupId>
+            <artifactId>atu-reports</artifactId>
+            <version>5.5_BETA</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/ATUTestRecorder_2.1.jar</systemPath>
+	</dependency>
+<dependency>
+    <groupId>io.appium</groupId>
+    <artifactId>java-client</artifactId>
+    <version>5.0.4</version>
+</dependency>
+
+</dependencies>		
+</project>
